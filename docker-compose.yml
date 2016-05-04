@@ -20,6 +20,8 @@ gitlab:
   environment:
     - DEBUG=false
     - TZ=Asia/Kolkata
+    - OAUTH_GITHUB_API_KEY=49ee61869aa2135595a0
+    - OAUTH_GITHUB_APP_SECRET=70caeff3023a868d80b80a846ecbccb5d3b040b2
     - GITLAB_TIMEZONE=Kolkata
 
     - GITLAB_SECRETS_DB_KEY_BASE=long-and-random-alphanumeric-string
