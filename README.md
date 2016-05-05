@@ -6,6 +6,19 @@
 - after successfully setup, run `docker-compose up`
 - jenkins will be accessible from [http://192.168.99.100:32783](http://192.168.99.100:32783)
 - gitlab will be accessible from [http://192.168.99.100:10080](http://192.168.99.100:10080)
+- jenkins plugins (gitlab, rake, ruby, rvm)
+
+# Jenkins in centos
+```bash
+yum install wget vim initscripts
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo; rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+yum remove java
+yum install jenkins java-1.7.0-openjdk
+chkconfig jenkins on
+service jenkins start
+```
+
+~/.docker/config.json should use "https://index.docker.io/v1/" instead of "docker.io" as the registry name.
 
 # Running
 - add ssh key into your gitlab project (Profile Settings > SSH Keys)
